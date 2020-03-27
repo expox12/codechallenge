@@ -1,0 +1,12 @@
+spring:  
+  jpa:
+    hibernate:
+      ddl-auto: none
+      
+  liquibase:
+    change-log: classpath:liquibase.yml
+ 
+logging:
+  level:
+    com.codechallenge: DEBUG
+    
