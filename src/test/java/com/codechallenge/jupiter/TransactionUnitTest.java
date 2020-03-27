@@ -62,6 +62,20 @@ class TransactionUnitTest {
 		Assertions.assertTrue(transactionList.size() > 0);
 	}
 	
+	@DisplayName("Find a transaction by empty IBAN")
+	@ParameterizedTest(name = "Empty argument")
+	@ValueSource(strings = { "" })
+	void findATransactionByEmptyIban(String iban) {
+		SearchRequest request = new SearchRequest();
+		request.setIban(iban);
+		request.setSort(Direction.ASC);
+		
+		List<Transaction> transactionList = this.service.findTransactions(request);
+		Assertions.assertTrue(transactionList.isEmpty());
+	}
+	
+	
+	
 	@Nested
 	class ExceptionsTest {
 		
