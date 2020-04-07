@@ -44,3 +44,9 @@
 
 - Unit testing
 - More cucumber tests for assumptions
+
+## UPDATES
+
+- Unit testing for Exceptions.
+- Behavior-Driven Development (BDD) tests with JUnit Jupiter
+- Some properties have been specified inside application.properties file.
